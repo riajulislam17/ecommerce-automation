@@ -1,0 +1,29 @@
+{
+  "name": "anwar-ecommerce-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent storefront UI, functional and regression automation with Playwright, TypeScript and page objects.",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --grep @ui",
+    "test:functional": "playwright test --grep @functional",
+    "test:regression": "playwright test --grep @regression",
+    "test:public": "playwright test --grep-invert @customer",
+    "test:coupon": "playwright test --grep @coupon",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:list": "playwright test --list --reporter=list",
+    "report": "playwright show-report playwright-report",
+    "typecheck": "tsc --noEmit",
+    "browsers:install": "playwright install chromium"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.9",
+    "typescript": "^7.0.2"
+  }
+}
